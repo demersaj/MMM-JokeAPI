@@ -27,15 +27,10 @@ Module.register("MMM-JokeAPI", {
     },
     setupHTMLStructure(wrapper) {
         {
-            const setup = document.createElement("h1");
-            setup.className = "bright medium light no-wrap fadeInJoke";
-            setup.innerHTML = this.joke.joke;
+            const joke = document.createElement("h1");
+            joke.className = "bright medium light fadeInJoke";
+            joke.innerHTML = this.joke.joke;
             wrapper.appendChild(joke);
-
-            /*const punchline = document.createElement("h2");
-            punchline.className = "bright small light fadeInPunchline";
-            punchline.innerHTML = this.joke.delivery;
-            wrapper.appendChild(punchline);*/
         }
     },
     getJoke() {
