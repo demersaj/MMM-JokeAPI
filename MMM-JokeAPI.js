@@ -37,13 +37,13 @@ Module.register("MMM-JokeAPI", {
 
             const setup = document.createElement("h1");
             setup.className = "bright medium light no-wrap fadeInJoke";
-            setup.innerHTML = this.joke.setup;
-            wrapper.appendChild(setup);
+            setup.innerHTML = this.joke.joke;
+            wrapper.appendChild(joke);
 
-            const punchline = document.createElement("h2");
+            /*const punchline = document.createElement("h2");
             punchline.className = "bright small light fadeInPunchline";
             punchline.innerHTML = this.joke.delivery;
-            wrapper.appendChild(punchline);
+            wrapper.appendChild(punchline);*/
         }
     },
     getJoke() {
