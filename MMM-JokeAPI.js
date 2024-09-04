@@ -1,8 +1,7 @@
 Module.register("MMM-JokeAPI", {
     defaults: {
-        category: "Programming",
         fetchInterval: 10 * 1000
-    },
+    }, 
     getStyles() {
         return [
             this.file('style.css')
@@ -48,7 +47,12 @@ Module.register("MMM-JokeAPI", {
         }
     },
     getJoke() {
-        fetch(`https://icanhazdadjoke.com/`).then((response) => {
+        fetch(`https://icanhazdadjoke.com/`, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }).then((response) => {
             response.json().then((joke) => {
                 this.joke = joke;
                 this.updateDom();
