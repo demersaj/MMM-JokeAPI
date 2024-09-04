@@ -26,15 +26,7 @@ Module.register("MMM-JokeAPI", {
         return wrapper;
     },
     setupHTMLStructure(wrapper) {
-        if (this.joke.type === 'single') {
-
-            const joke = document.createElement("h1");
-            joke.className = "bright medium light fadeInJoke";
-            joke.innerHTML = this.joke.joke;
-            wrapper.appendChild(joke);
-
-        } else if (this.joke.type === 'twopart') {
-
+        {
             const setup = document.createElement("h1");
             setup.className = "bright medium light no-wrap fadeInJoke";
             setup.innerHTML = this.joke.joke;
